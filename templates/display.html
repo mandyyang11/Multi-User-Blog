@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/css/main.css" />
+		<title>/Blog/</title>
+	</head>
+	<body>
+		<a href="/" class="main-title"><p class="par">
+    		CS 253 Blog</p>
+  		</a>
+
+  		<div class="login-area">
+    	
+    	{{loginCheck | safe}}
+    
+  		</div>
+  		
+	  		
+  		<div id="content">
+			{% for blog in blogs %}
+	    		<div class="post">
+	      			<div class="post-heading">
+	        			<a href="/{{blog.key().id()}}" class="post-title">
+	          				{{blog.subject}}
+	        			</a>
+		      		</div>
+	      		
+	      			<div class="post-date">
+	          			{{blog.created.strftime("%B %d, %Y")}}
+	        		</div>
+	      			
+	      			<div class="post-content">
+	        			{{blog.content | safe}}
+	      			</div>
+
+	      			<div class="other-info">
+	      				<div class="post-tailing">
+	        				<div class="post-date">
+	          					created by: {{blog.username}}
+	        				</div>
+
+	        		<a class="post-likes">
+	          			likes: {{blog.likes}}
+	        		</a>
+	        		
+  				</div>
+
+	      	{% endfor %}
+	    </div>
+		<div class="new-post">
+    		<a href="/newpost" class="button-new-post">
+    			
+    				{{new_post}}
+    			
+  			</a>
+  		</div>
+	</body>
+</html>		
