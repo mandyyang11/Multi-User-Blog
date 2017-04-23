@@ -1,0 +1,160 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post {
+    margin-top: 50px;
+}
+
+.other-info{
+    margin-top: 10px;
+}
+.post-likes {
+    font-size: 15px;
+    color:blue;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-tailing {
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+.button {
+    width: 75px;
+    background: #d2d2d2;
+    text-align: center;
+    float: left;
+    color: #000;
+    line-height: 20px; 
+    text-decoration: none;
+    margin: 3px;
+}
+.buttons{
+    margin-left:250px;
+    margin-bottom: 50px;
+}
+.post-date {
+    
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+    text-align: 
+
+}
+
+.post-content {
+    margin-top: 5px;
+}
+
+.button-new-post{
+    width: 75px;
+    background: #d2d2d2;
+    text-align: center;
+    float: left;
+    color: #000;
+    line-height: 20px; 
+    text-decoration: none;
+    margin: 3px;
+}
+.new-post{
+    margin-top: 10px;
+    margin-left: 350px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.comment-user{
+    color:lightgreen;
+    font-size: 18px;
+}
+.comment-date{
+    color:gray;
+    font-size:13px;
+    margin-bottom: 30px;
+}
