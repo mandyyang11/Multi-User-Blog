@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="/css/main.css" />
+
+  <title>CS 253 Blog</title>
+  
+</head>
+
+<body>
+  <a href="/" class="main-title"><p class="par">
+    CS 253 Blog</p>
+  </a>
+
+  <div class="login-area">
+      
+      {{loginCheck | safe}}
+    
+  </div>
+
+  <div id="content">
+    <div class="post">
+      <div class="post-heading">
+        <a href="/{{post_id}}" class="post-title">
+          {{subject}}
+        </a>
+      </div>
+
+      <div class="post-date">
+          {{created}}
+        </div>
+      
+      <div class="post-content">
+        {{content | safe}}
+      </div>
+    </div> 
+
+    <div class="other-info">
+      <div class="post-tailing">
+      <div class="post-date">
+        created by: {{username}}
+      </div>
+      <a class="post-likes">
+        likes: {{likes}}
+      </a>
+    </div>   
+  </div>
+
+  <div class="buttons">
+  <a href="/like/{{post_id}}" class="button">
+    like
+  </a>
+
+  <a href="/comment{{post_id}}" class="button">
+    comment
+  </a>
+
+  <a href="/edit{{post_id}}" class="button">
+    edit
+  </a>
+
+  <a href="/delete{{post_id}}" class="button">
+    delete
+  </a>
+  </div>
+  
+
+  {% for comment in comments %}
+    <hr>
+    <div class="comment">
+      <div class="comment-heading">
+        <a class="comment-user">
+          {{comment.username}}
+        </a>
+
+        <div class="comment-date">
+          {{comment.created.strftime("%B %d, %Y")}}
+        </div>
+      </div>
+     
+    <div class="comment-content">
+      {{comment.content | safe}}
+    </div>
+
+    <a href="/editComment{{comment.key().id()}}" class="button">
+      edit
+    </a>
+
+    <a href="/deleteComment{{comment.key().id()}}" class="button">
+      delete
+    </a>
+    <br>
+    <br>
+    
+  {% endfor %}
+
+</body>
+
+</html>
